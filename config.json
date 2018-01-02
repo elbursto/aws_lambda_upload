@@ -1,0 +1,35 @@
+{
+    "ZipLocalFname": "~/myfunction.zip",
+    "ZipBaseName": "~/myfunction",
+    "BuildDir": "./build",
+    "S3Bucket": "accountname-lambda",
+    "S3Key": "myfunction/myfunction.zip",
+    "FunctionName": "myFunction",
+    "Runtime": "nodejs6.10",
+    "Role": "arn:aws:iam::XXXXXXXXXXXX:role/lambda_basic_execution",
+    "Handler": "myfunction.handler",
+    "Description": "My Function",
+    "Timeout": 1,
+    "MemorySize": 128,
+    "Publish": true,
+    "SubnetIds": [
+        "subnet-xxxxxxxx",
+        "subnet-xxxxxxxx"
+    ],
+    "SecurityGroupIds": [
+        "sg-xxxxxxx"
+    ],
+    "DeadLetterTargetArn": "arn:aws:sns:us-south-4xxxxxxxxxx:deadletter",
+    "EnvironmentVariables": {
+        "ENRICO": "PALLAZZO"
+    },
+    "TracingConfigMode": "PassThrough",
+    "KeyArn": "arn:aws:kms:us-southeast-8:XXXXXXXXXXXXXXX:key/bf58c4cb-f4d8-45e9-a6bd-0d45a72e64c8",
+    "sourceFile": "myfunction.js",
+    "dependancies": [
+        "uuid4",
+        "winston"
+    ]
+    
+
+}
